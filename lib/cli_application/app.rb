@@ -1,6 +1,6 @@
 module CliApplication
   class App
-    attr_reader :argv, :exitcode, :folders, :config, :executed_at
+    attr_reader :argv, :exitcode, :folders, :config
     attr_reader :version, :description, :shortdescription, :releasedate
     attr_reader :databases
 
@@ -50,6 +50,13 @@ module CliApplication
       @config.add(filename, type)
     end
 
+    # Метод возвращает имя приложения
+    #
+    # @return [String] имя приложения без параметров командной строки и пути
+    def exename
+      ::StTools::System.exename
+    end
+
 
     #-------------------------------------------------------------
     #
@@ -59,6 +66,10 @@ module CliApplication
     def executed_at=(at)
       @executed_at = at
       @stat.executed_at = at
+    end
+
+    def executed_at
+      @executed_at = (::Time.now - @started_at).to_f
     end
 
     def exitcode=(code)

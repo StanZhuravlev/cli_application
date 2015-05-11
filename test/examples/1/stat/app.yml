@@ -1,26 +1,29 @@
 ---
 :name: app.rb
-:shortdescription: "Пример 1 - Hello, world"
+:shortdescription: "Пример 2 - Настройки CLI-приложения"
 :version: '1.0'
 :releasedate: '2015-05-11'
 :timezone: Moscow
-:last_started_at: '2015-05-11 20:13:22 +0300'
+:last_started_at: '2015-05-12 00:46:02 +0300'
 :folders:
-  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
+  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/2"
   :class: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
   :stat: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1/stat"
 :avg:
-  :starts: 4
-  :executed_at: 0.025534
-  :executed_at_human: 0.025534 секунд
-  :memory: 31844
+  :starts: 7
+  :executed_at: 0.041423
+  :executed_at_human: 0.041423 секунд
+  :memory: 31823
 :last:
-  :started_at: '2015-05-11 20:13:22 +0300'
-  :executed_at: 0.040195
-  :executed_at_human: 0.040195 секунд
-  :memory: 30 кбайт
+  :started_at: '2015-05-12 00:46:02 +0300'
+  :executed_at: 0.055449
+  :executed_at_human: 0.055449 секунд
+  :memory: 31 кбайт
   :exitcode: 255
 :last10:
+- 2015-05-12 00:46:02 +0300,255,0.055449,31 кбайт
+- 2015-05-12 00:45:54 +0300,255,0.064756,32 кбайт
+- 2015-05-12 00:41:58 +0300,255,0.067618,30 кбайт
 - 2015-05-11 20:13:22 +0300,255,0.040195,30 кбайт
 - 2015-05-11 19:35:58 +0300,255,0.031052,32 кбайт
 - 2015-05-11 19:14:46 +0300,255,0.030889,31 кбайт
