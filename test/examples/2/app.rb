@@ -7,7 +7,7 @@ class TestApp < CliExample
   def main
     puts "Приложение: #{exename}"
     puts "Запущено из папки: #{folders[:app]}"
-    puts "Базовый клас в: #{folders[:class]}"
+    puts "Базовый класс в: #{folders[:class]}"
     puts "Занимает сейчас в памяти #{StTools::Human.memory}"
     puts "С момента начала выполнения прошло #{executed_at} секунд"
   end

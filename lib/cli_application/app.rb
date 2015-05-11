@@ -3,6 +3,7 @@ module CliApplication
     attr_reader :argv, :exitcode, :folders, :config
     attr_reader :version, :description, :shortdescription, :releasedate
     attr_reader :databases
+    attr_accessor :footer
 
     def initialize(argv, appfolder, classfolder, lang = :ru)
       ::StTools::Setup.setup(lang)
@@ -15,7 +16,9 @@ module CliApplication
       @stat = ::CliApplication::Stat.new(@folders)
       @config = ::CliApplication::Config.new(@folders)
 
-      @mysql = ::CliApplication::Databases.new(@config.config[:cli][:databases])
+      @databases = ::CliApplication::Databases.new(@config.config[:cli][:databases])
+
+      @footer = nil
 
       init_app
     end
@@ -124,9 +127,19 @@ module CliApplication
       255
     end
 
+    def puts_footer
+      return if @footer.nil?
+      line = footer.gsub('{executed_at}', executed_at.to_s)
+      line.gsub!('{memory}', StTools::Human.memory)
+      line.gsub!('{exitcode}', @exitcode.to_s)
+      line.gsub!('{status}', (@exitcode == 0 ? 'SUCCESS' : 'FAIL'))
+      puts line
+    end
+
     def run
       self.exitcode = main || 255
       self.executed_at = (::Time.now - @started_at).to_f
+      puts_footer
       @stat.save
     end
 
