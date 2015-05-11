@@ -12,7 +12,7 @@ require 'active_record'
 
 module CliApplication
   require 'cli_application/config'
-  require 'cli_application/my_sql'
+  require 'cli_application/databases'
   require 'cli_application/stat'
   require 'cli_application/argv'
   require 'cli_application/app'
