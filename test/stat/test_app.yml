@@ -1,0 +1,29 @@
+---
+:name: test_app.rb
+:shortdescription: "Тестовое приложение"
+:version: '1.0'
+:releasedate: '2015-04-28'
+:timezone: Moscow
+:last_started_at: '2015-05-11 20:18:08 +0300'
+:folders:
+  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test"
+  :class: "/Users/Stan/Documents/Development/RubyMine/cli_application/test"
+  :stat: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/stat"
+:avg:
+  :starts: 6
+  :executed_at: 0.457864
+  :executed_at_human: 0.457864 секунд
+  :memory: 34187
+:last:
+  :started_at: '2015-05-11 20:18:08 +0300'
+  :executed_at: 1.354743
+  :executed_at_human: 1.354743 секунд
+  :memory: 38 кбайт
+  :exitcode: 0
+:last10:
+- 2015-05-11 20:18:08 +0300,0,1.354743,38 кбайт
+- 2015-05-10 08:51:15 +0300,0,1.242313,39 кбайт
+- 2015-05-10 08:43:39 +0300,0,0.066742,37 кбайт
+- 2015-05-10 08:36:33 +0300,0,0.056735,34 кбайт
+- 2015-05-08 22:33:07 +0300,0,0.02665,27 кбайт
+- ",0,0,25 кбайт"

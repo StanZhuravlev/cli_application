@@ -1,0 +1,21 @@
+---
+:name: rdebug-ide
+:shortdescription: ''
+:version: ''
+:releasedate: ''
+:timezone: Moscow
+:last_started_at: ''
+:folders: 
+:avg:
+  :starts: 1
+  :executed_at: 0
+  :executed_at_human: 0 секунд
+  :memory: 28860
+:last:
+  :started_at: ''
+  :executed_at: 0
+  :executed_at_human: 0 секунд
+  :memory: 28 кбайт
+  :exitcode: 0
+:last10:
+- ",0,0,28 кбайт"

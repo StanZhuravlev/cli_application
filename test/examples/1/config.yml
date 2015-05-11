@@ -1,0 +1,3 @@
+cli:
+  tz: "Moscow"
+  active_record_tz: "Moscow"
