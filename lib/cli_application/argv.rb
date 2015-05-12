@@ -29,7 +29,7 @@ module CliApplication
         when :bool, :boolean
           @params[key] = @params[key].to_s.to_bool
         when :split
-          @params[key] = @params[key].to_s.split(',', sort: true)
+          @params[key] = ::StTools::String.split(@params[key].to_s, ',', sort: true)
         when :range
           @params[key] = @params[key].to_s.to_range(sort: true, uniq: true)
         when :range_no_uniq
