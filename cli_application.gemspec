@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = CliApplication::VERSION
   spec.authors       = ["Stan Zhuravlev"]
   spec.email         = ["stan@post-api.ru"]
+  spec.license       = "MIT"
 
   spec.summary       = %q{Библиотека для построения CLI-приложений}
   spec.description   = %q{Цель библиотеки - обеспечить быструю разработку CLI-приложений (скриптов).
@@ -36,5 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "st_tools", "~> 0.3", ">= 0.3"
-  spec.add_development_dependency "activesupport"
+  spec.add_development_dependency "activesupport", "~> 4.1.0", '>= 4.1.0'
 end
