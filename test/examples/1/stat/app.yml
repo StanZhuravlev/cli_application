@@ -1,26 +1,27 @@
 ---
 :name: app.rb
-:shortdescription: "Пример 6 - подключение ActiveRecords и баз данных"
+:shortdescription: "Пример 4 - Различные параметры командной строки"
 :version: '1.0'
 :releasedate: '2015-05-11'
 :timezone: Moscow
-:last_started_at: '2015-05-13 22:04:12 +0300'
+:last_started_at: '2015-05-14 00:00:49 +0300'
 :folders:
-  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/6"
+  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/5"
   :class: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
   :stat: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1/stat"
 :avg:
-  :starts: 60
-  :executed_at: 0.059911
-  :executed_at_human: 0.059911 секунд
-  :memory: 32023
+  :starts: 61
+  :executed_at: 0.059675
+  :executed_at_human: 0.059675 секунд
+  :memory: 32057
 :last:
-  :started_at: '2015-05-13 22:04:12 +0300'
-  :executed_at: 1.267228
-  :executed_at_human: 1.267228 секунд
-  :memory: 38 кбайт
+  :started_at: '2015-05-14 00:00:49 +0300'
+  :executed_at: 0.045486
+  :executed_at_human: 0.045486 секунд
+  :memory: 33 кбайт
   :exitcode: 0
 :last10:
+- 2015-05-14 00:00:49 +0300,0,0.045486,33 кбайт
 - 2015-05-13 22:04:12 +0300,0,1.267228,38 кбайт
 - 2015-05-13 22:02:47 +0300,0,0.034901,34 кбайт
 - 2015-05-13 21:58:13 +0300,0,0.061671,32 кбайт
@@ -30,4 +31,3 @@
 - 2015-05-13 21:49:27 +0300,255,0.02996,31 кбайт
 - 2015-05-13 21:30:34 +0300,255,0.049195,31 кбайт
 - 2015-05-13 21:29:22 +0300,0,0.031453,32 кбайт
-- 2015-05-13 21:28:32 +0300,0,0.060008,32 кбайт

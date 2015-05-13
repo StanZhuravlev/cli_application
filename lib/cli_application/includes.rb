@@ -1,18 +1,18 @@
 # Расширяем стандартные классы, подмешивая туда функционал StTools
 
-class String
+class String # :nodoc:
   include ::StTools::Module::String
 end
 
-class Integer
+class Integer # :nodoc:
   include ::StTools::Module::Integer
 end
 
-class Time
+class Time  # :nodoc:
   include ::StTools::Module::Time
 end
 
-class Date
+class Date  # :nodoc:
   include ::StTools::Module::Time
 end
 

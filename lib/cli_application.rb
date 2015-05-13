@@ -11,7 +11,7 @@ require 'active_record'
 require 'ostruct'
 
 
-module CliApplication
+module CliApplication  # :nodoc:
   require 'cli_application/json_struct'
   require 'cli_application/config'
   require 'cli_application/databases'

@@ -1,5 +1,5 @@
 module CliApplication
-  class Stat
+  class Stat  # :nodoc:
     attr_reader :stat
 
     def initialize(folders)

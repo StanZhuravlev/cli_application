@@ -1,6 +1,14 @@
+# Данный класс обеспечивает управление аргументами командной строки
+
 module CliApplication
   class Argv < OpenStruct
 
+    # Конструктор. Вызывается при создании класса приложения. Данный класс доступен
+    # в главной функции приложения (main) через переменную argv
+    #
+    # @param [Array] argv аргументы командной строки, введенные пользователем
+    # @example Примеры использования
+    #   puts argv.city    #=> 'Москва'
     def initialize(argv)
       @params = Hash.new
       @full = Hash.new
@@ -16,6 +24,28 @@ module CliApplication
       super(@params)
     end
 
+    # Метод добавления аргумента командной строки. Вызывается при инициализации приложения, служит для определения списка
+    # аргументов командной строки, формирвоания подсказок и установки значения по умолчанию. В классе принят не традиционный
+    # для Linux формат командной строки. Пример вызова: add_city.rb user_id=123 name=Максим city='Верхние Луки'.
+    #
+    # Параметры, добавленные данным методом доступны через переменную argv (см. примеры)
+    #
+    # @param [Sym] action параметр определяет действие, которое надо произвести над параметром командной строки.
+    # @param [String] key название ключа, напрмиер 'user_id', 'name', 'city'.
+    # @param [Object] default значение по умочланию, "подставляемое" при отсутствии заданного пользователем параметра
+    # @param [String] description описание параметра (подсказка)
+    #
+    # @example Примеры использования
+    #   app = CliApplication.new(ARGV, __dir__)
+    #   app.set_argv(:integer, 'user_id', 0, 'Идентификатор пользователя')
+    #   app.set_argv(:string, 'name', 'Без имени', 'Имя пользователя')
+    #   app.set_argv(:caps, 'city', 'москВА', 'Город проживания пользователя')
+    #
+    #   def main
+    #     puts argv.user_id      #=> 0
+    #     puts argv.name         #=> 'Без имени'
+    #     puts argv.city         #=> 'Москва'
+    #   end
     def set_argv(action, key, default, description)
       key = key.downcase.strip.to_sym
       unless @params.keys.include?(key)
@@ -52,6 +82,7 @@ module CliApplication
       set_full(action, key, default, @params[key], description)
     end
 
+    # Метод выводит подсказку по аргументам командной строки
     def help
       puts
       puts "Параметры приложения:"
@@ -66,7 +97,7 @@ module CliApplication
       puts
     end
 
-    protected
+    private
 
     def set_full(action, key, default, value, description)
       @full[key] = Hash.new
@@ -108,7 +139,6 @@ module CliApplication
       out
     end
 
-
     def convert_from_hash
       @params.each do |key, value|
         name = new_ostruct_member(key)
@@ -116,9 +146,6 @@ module CliApplication
       end
     end
 
-    def to_h
-      @hash_table
-    end
 
   end
 end

@@ -1,6 +1,6 @@
 # https://gist.github.com/anonymous/0ea3a14166d24f750bd9
 
-class JsonStruct < OpenStruct
+class JsonStruct < OpenStruct  # :nodoc:
   def initialize(hash=nil)
 
     @table = {}
