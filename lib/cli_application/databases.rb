@@ -2,7 +2,7 @@ module CliApplication
   class Databases
 
     def initialize(config)
-      @config = config || Hash.new
+      @config = config.to_h || Hash.new
       ar_configuration
     end
 

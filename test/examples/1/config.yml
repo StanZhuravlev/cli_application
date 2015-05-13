@@ -1,3 +1,11 @@
 cli:
   timezone: "Moscow"
   ar_timezone: "Moscow" # Active Record timezone
+
+  databases:
+    default:
+      adapter: mysql2
+      host: localhost
+      database: online_store
+      username: user
+      password: passwords_chars
