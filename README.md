@@ -418,7 +418,58 @@ end
 
 ### Пример 6 - Подключение баз данных и моделей ActiveRecord's
 
+С помощью класса CliApplication можно эффективно управлять соединениями с базами данных, и моделями ActiveRecords.
+Давайте представим, что мы сделали Rails-проект, определили там модели ActiveRecord, и теперь хотим их переиспользовать
+в CLI-приложении. Для этого сделаем следующее.
 
+Сначала пропишем в конфиге параметры подключения к базам данных. Характеристики должны быть в ключе `config.cli.databases`.
+Данный ключ должен содержать записи вида <имя конфигурации> => <параметры конфигурации>. Баз данных можно подключать неограниченно.
+Рассмотрим пример конфига для подключения к MySQL. Имя конфигурации - `default`.
+
+```yaml
+cli:
+  timezone: "Moscow"
+  ar_timezone: "Moscow" # Active Record timezone
+
+  databases:
+    default:
+      adapter: mysql2
+      host: localhost
+      database: online_store
+      username: usersql
+      password: password_chars
+```
+
+Затем создадим функцию `app.init_active_records`, в которой будем подключать модели. Покажем ее вместе с функцией `main`.
+
+```ruby
+def main
+  puts Offer.first.inspect
+  puts
+  0
+end
+
+def init_active_records
+ require './offer.rb'
+end
+```
+
+Сама модель (файл offer.rb) должна выглядеть как показано ниже.
+
+```ruby
+class Offer < ActiveRecord::Base
+  self.establish_connection self.configurations[:default]
+  self.table_name = "offers_table"
+end
+```
+Запустим приложение, посомтрим на результат
+
+```text
+#<Offer id: 10, category: 1, name: "Игрушка десткая", description: "Эта игрушка непременно понравится...", ...
+```
+
+Таким образом, буквально в несколько строк мы можем работать с базами данных в CLI-приложении, так же, как в привычном
+Rails-окружении.
 
 ## Contributing
 
