@@ -5,8 +5,8 @@ require '../1/cli_example.rb'
 class TestApp < CliExample
 
   def main
-    puts "Временная зона для приложения (из конфига класса): #{@config.config[:cli][:tz]}"
-    puts "Тестовый ключ (из доп. конфига приложения): #{@config.config[:this_app][:test_key]}"
+    puts "Временная зона для приложения (из конфига класса): #{config.cli.timezone}"
+    puts "Тестовый ключ (из доп. конфига приложения): #{config.this_app.test_key}"
     puts
     0
   end

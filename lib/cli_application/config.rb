@@ -1,8 +1,10 @@
 module CliApplication
-  class Config
+  class Config < OpenStruct
     attr_reader :config
 
     def initialize(folders)
+      super(nil)
+      return if folders.nil?
       @folders = folders
       @filenames = Array.new
       @config_filename = File.join([folders[:class], 'config.yml'])
@@ -28,15 +30,22 @@ module CliApplication
         @config.merge!(tmp)
       end
 
+      tmp = JsonStruct.new(@config)
+      tmp.each_pair { |key, value| set_pair(key, value)  }
       valid?
 
-      ::Time.zone = @config[:cli][:tz]
+      ::Time.zone = self.cli.timezone
+    end
+
+    def set_pair(key, value)
+      name = new_ostruct_member(key)
+      self[name] = value
     end
 
     def valid?
-      raise "ОШИБКА: не найдена секция 'cli'" if @config[:cli].nil?
-      raise "ОШИБКА: не найдена секция 'cli.tz'" if @config[:cli][:tz].nil?
-      raise "ОШИБКА: не найдена секция 'cli.active_record_tz'" if @config[:cli][:active_record_tz].nil?
+      raise "ОШИБКА: не найдена секция 'cli'" if self.cli.nil?
+      raise "ОШИБКА: не найдена секция 'cli.tz'" if self.cli.timezone.nil?
+      raise "ОШИБКА: не найдена секция 'cli.active_record_tz'" if self.cli.ar_timezone.nil?
     end
 
 

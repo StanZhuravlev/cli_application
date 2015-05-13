@@ -5,7 +5,7 @@ require './cli_example.rb'
 class TestApp < CliExample
 
   def main
-    puts "Hello, #{argv[:user]}!"
+    puts "Hello, #{argv.user}!"
   end
 
 end

@@ -16,7 +16,7 @@ module CliApplication
       @stat = ::CliApplication::Stat.new(@folders)
       @config = ::CliApplication::Config.new(@folders)
 
-      @databases = ::CliApplication::Databases.new(@config.config[:cli][:databases])
+      @databases = ::CliApplication::Databases.new(config.cli.databases)
 
       @footer = nil
 
@@ -114,7 +114,7 @@ module CliApplication
 
     def set_appconfig(name)
       @config.load_config(@folders[:class] + '/' + name)
-      @stat.timezone = @config.config[:cli][:tz]
+      @stat.timezone = @config.cli.timezone
     end
 
 

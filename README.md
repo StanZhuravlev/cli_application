@@ -80,8 +80,8 @@ end
 
 ```yaml
 cli:
-  tz: "Moscow"
-  active_record_tz: "Moscow"
+  timezone: "Moscow"
+  ar_timezone: "Moscow"
 ```
 
 И создаем своё тестовое приложение
@@ -94,7 +94,7 @@ require './cli_example.rb'
 class TestApp < CliExample
 
   def main
-    puts "Hello, #{argv[:user]}!"
+    puts "Hello, #{argv.user}!"
   end
 
 end
@@ -293,16 +293,17 @@ app.set_argv(:string, 'ex10', 'ПрИвВеТ', 'Пример неизменно
 
 ```ruby
 def main
-  puts ":downcase - #{argv[:ex1].inspect} (#{argv[:ex1].class.to_s})"
-  puts ":upcase - #{argv[:ex2].inspect} (#{argv[:ex2].class.to_s})"
-  puts ":bool - #{argv[:ex3].inspect} (#{argv[:ex3].class.to_s})"
-  puts ":split - #{argv[:ex4].inspect} (#{argv[:ex4].class.to_s})"
-  puts ":range - #{argv[:ex5].inspect} (#{argv[:ex5].class.to_s})"
-  puts ":float - #{argv[:ex6].inspect} (#{argv[:ex6].class.to_s})"
-  puts ":integer - #{argv[:ex7].inspect} (#{argv[:ex7].class.to_s})"
-  puts ":normalize - #{argv[:ex8].inspect} (#{argv[:ex8].class.to_s})"
-  puts ":caps - #{argv[:ex9].inspect} (#{argv[:ex9].class.to_s})"
-  puts ":string - #{argv[:ex10].inspect} (#{argv[:ex10].class.to_s})"
+  puts ":downcase - #{argv.ex1.inspect} (#{argv.ex1.class.to_s})"
+  puts ":upcase - #{argv.ex2.inspect} (#{argv.ex2.class.to_s})"
+  puts ":bool - #{argv.ex3.inspect} (#{argv.ex3.class.to_s})"
+  puts ":split - #{argv.ex4.inspect} (#{argv.ex4.class.to_s})"
+  puts ":range - #{argv.ex5.inspect} (#{argv.ex5.class.to_s})"
+  puts ":float - #{argv.ex6.inspect} (#{argv.ex6.class.to_s})"
+  puts ":integer - #{argv.ex7.inspect} (#{argv.ex7.class.to_s})"
+  puts ":normalize - #{argv.ex8.inspect} (#{argv.ex8.class.to_s})"
+  puts ":caps - #{argv.ex9.inspect} (#{argv.ex9.class.to_s})"
+  puts ":string - #{argv.ex10.inspect} (#{argv.ex10.class.to_s})"
+  puts "Неизвестный ключ возвращает nil - #{argv.no_key.inspect}"
   puts
   0
 end
@@ -388,8 +389,8 @@ this_app:
 
 ```ruby
 def main
-  puts "Временная зона для приложения (из конфига класса): #{@config.config[:cli][:tz]}"
-  puts "Тестовый ключ (из доп. конфига приложения): #{@config.config[:this_app][:test_key]}"
+  puts "Временная зона для приложения (из конфига класса): #{config.cli.timezone}"
+  puts "Тестовый ключ (из доп. конфига приложения): #{config.this_app.test_key}"
   puts
   0
 end
@@ -413,7 +414,7 @@ end
 
 При запуске функции `@config.add_config` происходит перечитывание всех конфигов.
 
-Затем в функции `main` осуществляется использование данных конфига с использованием имеющихся в конфиге ключей. 
+Затем в функции `main` осуществляется использование данных конфига с использованием имеющихся в конфиге ключей.
 
 ### Пример 6 - Подключение баз данных и моделей ActiveRecord's
 

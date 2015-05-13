@@ -1,5 +1,5 @@
 module CliApplication
-  class Argv
+  class Argv < OpenStruct
 
     def initialize(argv)
       @params = Hash.new
@@ -13,10 +13,7 @@ module CliApplication
           warn "WARNING: некорректный ключ параметра командной строки: #{one.inspect} (#{File.basename(__FILE__)} at #{__LINE__})"
         end
       end
-    end
-
-    def [](index)
-      @params[index]
+      super(@params)
     end
 
     def set_argv(action, key, default, description)
@@ -51,6 +48,7 @@ module CliApplication
         else
       end
 
+      convert_from_hash
       set_full(action, key, default, @params[key], description)
     end
 
@@ -110,7 +108,18 @@ module CliApplication
       out
     end
 
+
+    def convert_from_hash
+      @params.each do |key, value|
+        name = new_ostruct_member(key)
+        self[name] = value
+      end
+    end
+
+    def to_h
+      @hash_table
+    end
+
   end
 end
 
-# todo: конвертировать текст параметров в utf-8

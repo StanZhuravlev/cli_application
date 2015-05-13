@@ -5,16 +5,17 @@ require '../1/cli_example.rb'
 class TestApp < CliExample
 
   def main
-    puts ":downcase - #{argv[:ex1].inspect} (#{argv[:ex1].class.to_s})"
-    puts ":upcase - #{argv[:ex2].inspect} (#{argv[:ex2].class.to_s})"
-    puts ":bool - #{argv[:ex3].inspect} (#{argv[:ex3].class.to_s})"
-    puts ":split - #{argv[:ex4].inspect} (#{argv[:ex4].class.to_s})"
-    puts ":range - #{argv[:ex5].inspect} (#{argv[:ex5].class.to_s})"
-    puts ":float - #{argv[:ex6].inspect} (#{argv[:ex6].class.to_s})"
-    puts ":integer - #{argv[:ex7].inspect} (#{argv[:ex7].class.to_s})"
-    puts ":normalize - #{argv[:ex8].inspect} (#{argv[:ex8].class.to_s})"
-    puts ":caps - #{argv[:ex9].inspect} (#{argv[:ex9].class.to_s})"
-    puts ":string - #{argv[:ex10].inspect} (#{argv[:ex10].class.to_s})"
+    puts ":downcase - #{argv.ex1.inspect} (#{argv.ex1.class.to_s})"
+    puts ":upcase - #{argv.ex2.inspect} (#{argv.ex2.class.to_s})"
+    puts ":bool - #{argv.ex3.inspect} (#{argv.ex3.class.to_s})"
+    puts ":split - #{argv.ex4.inspect} (#{argv.ex4.class.to_s})"
+    puts ":range - #{argv.ex5.inspect} (#{argv.ex5.class.to_s})"
+    puts ":float - #{argv.ex6.inspect} (#{argv.ex6.class.to_s})"
+    puts ":integer - #{argv.ex7.inspect} (#{argv.ex7.class.to_s})"
+    puts ":normalize - #{argv.ex8.inspect} (#{argv.ex8.class.to_s})"
+    puts ":caps - #{argv.ex9.inspect} (#{argv.ex9.class.to_s})"
+    puts ":string - #{argv.ex10.inspect} (#{argv.ex10.class.to_s})"
+    puts "Неизвестный ключ возвращает nil - #{argv.no_key.inspect}"
 
     puts
     0
