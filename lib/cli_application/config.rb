@@ -63,7 +63,7 @@ module CliApplication
       valid?
 
       ::Time.zone = self.cli.timezone
-      # todo: добавить установки времени для записей ActiveRecord
+      ::ActiveRecord::Base.default_timezone = self.cli.ar_timezone
     end
 
     def set_pair(key, value)  # :nodoc:

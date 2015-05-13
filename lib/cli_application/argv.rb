@@ -88,7 +88,6 @@ module CliApplication
       puts "Параметры приложения:"
 
       screenwidth = ::StTools::System.screen(:width)
-      keylen = self.keylen
 
       @full.each do |key, data|
         line = get_helpline(key, data[:description], keylen, screenwidth)
@@ -97,7 +96,9 @@ module CliApplication
       puts
     end
 
+
     private
+
 
     def set_full(action, key, default, value, description)
       @full[key] = Hash.new

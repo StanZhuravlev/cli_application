@@ -4,23 +4,26 @@
 :version: '1.0'
 :releasedate: '2015-05-11'
 :timezone: Moscow
-:last_started_at: '2015-05-14 00:00:49 +0300'
+:last_started_at: '2015-05-14 00:34:52 +0300'
 :folders:
-  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/5"
+  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/4"
   :class: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
   :stat: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1/stat"
 :avg:
-  :starts: 61
-  :executed_at: 0.059675
-  :executed_at_human: 0.059675 секунд
-  :memory: 32057
+  :starts: 64
+  :executed_at: 0.058898
+  :executed_at_human: 0.058898 секунд
+  :memory: 32213
 :last:
-  :started_at: '2015-05-14 00:00:49 +0300'
-  :executed_at: 0.045486
-  :executed_at_human: 0.045486 секунд
-  :memory: 33 кбайт
+  :started_at: '2015-05-14 00:34:52 +0300'
+  :executed_at: 0.036307
+  :executed_at_human: 0.036307 секунд
+  :memory: 34 кбайт
   :exitcode: 0
 :last10:
+- 2015-05-14 00:34:52 +0300,0,0.036307,34 кбайт
+- 2015-05-14 00:34:41 +0300,255,0.056077,35 кбайт
+- 2015-05-14 00:34:16 +0300,255,0.036939,34 кбайт
 - 2015-05-14 00:00:49 +0300,0,0.045486,33 кбайт
 - 2015-05-13 22:04:12 +0300,0,1.267228,38 кбайт
 - 2015-05-13 22:02:47 +0300,0,0.034901,34 кбайт
@@ -28,6 +31,3 @@
 - 2015-05-13 21:55:36 +0300,0,0.033505,31 кбайт
 - 2015-05-13 21:54:50 +0300,0,0.034287,31 кбайт
 - 2015-05-13 21:50:54 +0300,255,0.045199,32 кбайт
-- 2015-05-13 21:49:27 +0300,255,0.02996,31 кбайт
-- 2015-05-13 21:30:34 +0300,255,0.049195,31 кбайт
-- 2015-05-13 21:29:22 +0300,0,0.031453,32 кбайт
