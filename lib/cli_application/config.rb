@@ -10,7 +10,11 @@ module CliApplication
     end
 
     def add(filename, type)
-      load_config(File.join(@folders[type], filename))
+      if @folders.keys.include?(type)
+        load_config(File.join(@folders[type], filename))
+      else
+        warn "Предупреждение: попытка загрузить конфиг неизвестного типа (#{type.inspect}). Допустимы #{@folders.keys.inspect}"
+      end
     end
 
     def load_config(filename)
