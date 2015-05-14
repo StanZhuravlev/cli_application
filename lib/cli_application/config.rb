@@ -54,8 +54,12 @@ module CliApplication
       @config = Hash.new
 
       @filenames.each do |one|
-        tmp = YAML.load_file(one).deep_symbolize_keys rescue Hash.new
-        @config.merge!(tmp)
+        begin
+          tmp = YAML.load_file(one).deep_symbolize_keys
+          @config.merge!(tmp)
+        rescue Exception => e
+          warn "Предупреждение: ошибка чтения конфига #{e.message}"
+        end
       end
 
       tmp = JsonStruct.new(@config)

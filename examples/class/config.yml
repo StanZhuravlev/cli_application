@@ -1,0 +1,8 @@
+cli:
+  timezone: "Moscow"
+  ar_timezone: "Moscow" # Active Record timezone
+
+  databases:
+    example:
+      adapter: 'sqlite3'
+      database: 'example.db'

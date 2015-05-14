@@ -7,6 +7,7 @@ require 'cli_application/includes'
 require 'active_support/time'
 require 'mysql2'
 require 'pg'
+require 'sqlite3'
 require 'active_record'
 require 'ostruct'
 
