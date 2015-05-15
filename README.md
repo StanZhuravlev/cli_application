@@ -81,7 +81,6 @@ end
 ```yaml
 cli:
   timezone: "Moscow"
-  ar_timezone: "Moscow"
 ```
 
 И создаем своё тестовое приложение
@@ -433,7 +432,6 @@ _См. /test/examples/6_
 ```yaml
 cli:
   timezone: "Moscow"
-  ar_timezone: "Moscow" # Active Record timezone
 
   databases:
     default:

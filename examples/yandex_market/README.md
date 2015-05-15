@@ -32,7 +32,6 @@ end
 ```yml
 cli:
   timezone: "Moscow"
-  ar_timezone: "Moscow" # Active Record timezone
 
   databases:
     example:

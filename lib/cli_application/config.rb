@@ -67,7 +67,7 @@ module CliApplication
       valid?
 
       ::Time.zone = self.cli.timezone
-      ::ActiveRecord::Base.default_timezone = self.cli.ar_timezone
+      ::ActiveRecord::Base.default_timezone = :local
     end
 
     def set_pair(key, value)  # :nodoc:
@@ -77,8 +77,7 @@ module CliApplication
 
     def valid? # :nodoc:
       raise "ОШИБКА: не найдена секция 'cli'" if self.cli.nil?
-      raise "ОШИБКА: не найдена секция 'cli.tz'" if self.cli.timezone.nil?
-      raise "ОШИБКА: не найдена секция 'cli.active_record_tz'" if self.cli.ar_timezone.nil?
+      raise "ОШИБКА: не найдена секция 'cli.timezone'" if self.cli.timezone.nil?
     end
 
 

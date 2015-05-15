@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2015-05-14 19:06">
+  <shop>
+    <name>Тестовый магазин</name>
+    <company>ООО &apos;Рога &amp; Копыта&apos;</company>
+    <url>http://test</url>
+    <phone>+7 (495) 123-4567</phone>
+    <email>info@test.ru</email>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Игрушки</category>
+      <category id="2">Одежда</category>
+    </categories>
+    <local_delivery_cost>300</local_delivery_cost>
+    <offers>
+      <offer id="1" available="false">
+        <url>http://test/pony</url>
+        <price>100</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>http://test/image1</picture>
+        <delivery>true</delivery>
+        <name>Пони</name>
+        <description>Любимая игрушка для детей</description>
+      </offer>
+      <offer id="2" available="false">
+        <url>http://test/car</url>
+        <price>200</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>http://test/image2</picture>
+        <delivery>true</delivery>
+        <name>Машинка</name>
+        <description>Любимая игрушка для мальчиков</description>
+      </offer>
+      <offer id="3" available="false">
+        <url>http://test/toy</url>
+        <price>230</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>http://test/image3</picture>
+        <delivery>true</delivery>
+        <name>Кукла</name>
+        <description>Кукла для девочек</description>
+      </offer>
+      <offer id="4" available="false">
+        <url>http://test/wear</url>
+        <price>3100</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>http://test/image4</picture>
+        <delivery>true</delivery>
+        <name>Кофта</name>
+        <description>Красивая кофта</description>
+      </offer>
+      <offer id="5" available="false">
+        <url>http://test/boots</url>
+        <price>8900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>http://test/image5</picture>
+        <delivery>true</delivery>
+        <name>Ботинки</name>
+        <description>Элегантные ботинки</description>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
