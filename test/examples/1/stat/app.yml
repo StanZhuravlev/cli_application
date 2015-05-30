@@ -1,33 +1,33 @@
 ---
 :name: app.rb
-:shortdescription: "Пример 1 - Hello, world"
+:shortdescription: "Пример 2 - Настройки CLI-приложения"
 :version: '1.0'
 :releasedate: '2015-05-11'
 :timezone: Moscow
-:last_started_at: '2015-05-15 23:23:39 +0300'
+:last_started_at: '2015-05-30 12:27:25 +0300'
 :folders:
-  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
+  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/7"
   :class: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
   :stat: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1/stat"
 :avg:
-  :starts: 66
-  :executed_at: 0.058256
-  :executed_at_human: 0.058256 секунд
-  :memory: 32326
+  :starts: 87
+  :executed_at: 0.698304
+  :executed_at_human: 0.698304 секунд
+  :memory: 33244
 :last:
-  :started_at: '2015-05-15 23:23:39 +0300'
-  :executed_at: 0.036261
-  :executed_at_human: 0.036261 секунд
+  :started_at: '2015-05-30 12:27:25 +0300'
+  :executed_at: 21.539793
+  :executed_at_human: 21.539793 секунд
   :memory: 35 кбайт
-  :exitcode: 255
+  :exitcode: true
 :last10:
-- 2015-05-15 23:23:39 +0300,255,0.036261,35 кбайт
-- 2015-05-15 23:16:42 +0300,255,0.039154,35 кбайт
-- 2015-05-14 00:34:52 +0300,0,0.036307,34 кбайт
-- 2015-05-14 00:34:41 +0300,255,0.056077,35 кбайт
-- 2015-05-14 00:34:16 +0300,255,0.036939,34 кбайт
-- 2015-05-14 00:00:49 +0300,0,0.045486,33 кбайт
-- 2015-05-13 22:04:12 +0300,0,1.267228,38 кбайт
-- 2015-05-13 22:02:47 +0300,0,0.034901,34 кбайт
-- 2015-05-13 21:58:13 +0300,0,0.061671,32 кбайт
-- 2015-05-13 21:55:36 +0300,0,0.033505,31 кбайт
+- 2015-05-30 12:27:25 +0300,true,21.539793,35 кбайт
+- 2015-05-30 11:52:07 +0300,true,0.880834,35 кбайт
+- 2015-05-30 11:51:13 +0300,true,16.334672,36 кбайт
+- 2015-05-30 11:43:31 +0300,true,1.077774,35 кбайт
+- 2015-05-30 11:40:30 +0300,#<Net::SMTP::Response:0x007fe89425e1d8>,16.540158,34 кбайт
+- 2015-05-30 11:26:21 +0300,255,0.031659,37 кбайт
+- 2015-05-30 11:22:50 +0300,255,0.031873,36 кбайт
+- 2015-05-30 11:22:36 +0300,255,0.034389,35 кбайт
+- 2015-05-30 11:18:59 +0300,255,0.030666,35 кбайт
+- 2015-05-30 11:18:33 +0300,255,0.030451,35 кбайт

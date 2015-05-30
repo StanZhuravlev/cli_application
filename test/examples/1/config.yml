@@ -8,3 +8,10 @@ cli:
       database: online_store
       username: user
       password: passwords_chars
+
+  mail:
+    enable: true
+    from: 'Admin <admin@test-mail.ru>'
+    host: test-mail.ru
+    port: 25
+    footer: '<br><br>--------------<br>Your gem <b>cli_application</b>'

@@ -5,6 +5,8 @@ module CliApplication
   class App
     # Ссылка на класс, который содержит аргменты командной строки или значения по умолчанию
     attr_reader :argv
+    # Ссылка на класс - почтовик, для отсылки различных email'ов
+    attr_reader :mail
     # Код завершения приложения. Может быть использован в Bash-скриптах
     attr_reader :exitcode
     # Ссылка на массив, содержащий список директорий в которых исполняется приложение.
@@ -44,6 +46,7 @@ module CliApplication
       @config = ::CliApplication::Config.new(@folders)
 
       @databases = ::CliApplication::Databases.new(config.cli.databases)
+      @mail = ::CliApplication::Mail.new(config.cli.mail)
 
       @footer = nil
 

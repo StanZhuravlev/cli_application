@@ -10,12 +10,14 @@ require 'pg'
 require 'sqlite3'
 require 'active_record'
 require 'ostruct'
+require 'net/smtp'
 
 
 module CliApplication  # :nodoc:
   require 'cli_application/json_struct'
   require 'cli_application/config'
   require 'cli_application/databases'
+  require 'cli_application/mail'
   require 'cli_application/stat'
   require 'cli_application/argv'
   require 'cli_application/app'
