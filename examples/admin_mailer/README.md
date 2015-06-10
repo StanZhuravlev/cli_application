@@ -271,8 +271,8 @@ mail:
   footer: '<br><br><hr width="1px">Тестовая подпись от <b>cli_application gem</b>'
 
   smtp:
-    domain: post-api.ru
-    address: ns395420.ip-176-31-117.eu
+    domain: cli-application.ru
+    address: smtp.cli-application.ru
     port: 25
     debug: false
 ```
@@ -282,10 +282,10 @@ mail:
 
 Запускаем приложение. Смотрим результаты: в почтовый ящик пришло письмо следующего содержания.
 
-```
-Cli-Application Notify
-User Name
-Тестовое письмо
+Отправитель: Cli-Application Notify <admin@cli-application.ru>
+Тема: Тестовое письмо
+Дата: 10 Jun 2015 04:05:29 pm GMT+3
+Получатель: User Name <user@host.ru>
 
 <h1>Уведомление</h1>
 <p>Получены следующие алерты</p>
@@ -296,7 +296,49 @@ User Name
 </ul>
 <p>Необходимо <b>срочно</b> принять меры!</p>
 <br><hr height="1px" width="250px" align="left">Тестовая подпись от <b>cli_application gem</b>
+
+
+Посмотрим также содержимое письма.
+
+```html
+--NextPart_2605766639589518084_616293
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset="utf-8"
+
+***********
+Уведомление
+***********
+
+Получены следующие алерты
+
+* Не хватает памяти
+* Перегрузка процессора
+* Неисправен HDD
+
+Необходимо срочно принять меры!
+
+Тестовая подпись от cli_application gem
+
+--NextPart_2605766639589518084_616293
+Content-Transfer-Encoding: 8bit
+Content-Type: text/html; charset="utf-8"
+
+<h1>Уведомление</h1>
+<p>Получены следующие алерты</p>
+<ul>
+<li>Не хватает памяти</li>
+<li>Перегрузка процессора</li>
+<li>Неисправен HDD</li>
+</ul>
+<p>Необходимо <b>срочно</b> принять меры!</p><br><hr height="1px" width="300px" align="left">Тестовая подпись от <b>cli_application gem</b>
+
+--NextPart_2605766639589518084_616293--
 ```
 
- 
+В теле письма содержится кроме HTML-версии, еще и PLAIN-версия письма, что позволит просматривать его в консольном
+приложении. Эта возможность может оказаться полезной для системных администраторов, которые используют telnet в
+качестве основного средства администрирования.
 
+
+
+debug
