@@ -12,7 +12,7 @@ cli:
   mail:
     enable: true  # Разрешить или заблокировать отправку почты
     delivery_method: log # Способ отправки почты: smtp, log, sendmail
-    from: 'Admin <admin@cli-application.ru>' # 'Admin <mos_obl_data@mail.ru>'
+    from: 'Admin <admin@cli-application.ru>'
     footer: '<br><br>--------------<br>Your gem <b>cli_application</b>'
 
     log:
