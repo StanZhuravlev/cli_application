@@ -8,4 +8,7 @@ gem 'activerecord'
 gem 'pg'
 gem 'mysql2'
 gem 'sqlite3'
+gem 'htmlentities'
+gem 'tlsmail'
+
 

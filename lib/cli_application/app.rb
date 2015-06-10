@@ -46,7 +46,7 @@ module CliApplication
       @config = ::CliApplication::Config.new(@folders)
 
       @databases = ::CliApplication::Databases.new(config.cli.databases)
-      @mail = ::CliApplication::Mail.new(config.cli.mail)
+      @mail = ::CliApplication::Mail.new(config.cli.mail, @folders)
 
       @footer = nil
 
@@ -246,6 +246,12 @@ module CliApplication
         @argv.help
         puts
       end
+    end
+
+    def reserved_methods
+      out = ['argv', 'folders', 'config', 'mail', 'executed_at', 'version', 'description', 'footer', 'databases']
+      out += ['help', 'run']
+      out.sort
     end
 
 

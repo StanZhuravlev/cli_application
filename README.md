@@ -467,7 +467,7 @@ end
 Запустим приложение, посомтрим на результат
 
 ```text
-#<Offer id: 10, category: 1, name: "Игрушка десткая", description: "Эта игрушка непременно понравится...", ...
+#<Offer id: 10, category: 1, name: "Игрушка детская", description: "Эта игрушка непременно понравится...", ...
 ```
 
 Таким образом, буквально в несколько строк мы можем работать с базами данных в CLI-приложении, так же, как в привычном
@@ -478,52 +478,5 @@ Rails-окружении.
 _См. /test/examples/7_
 
 Иногда нужно отправлять различные нотификации из скрипта. Для этого классе CliApplication есть почтовый дивжок mail.
-Попробуем использовать его
+Детальное описание его работы с примерами приведено [здесь](/examples/admin_mailer/README.md).
 
-Сначала пропишем в конфиге параметры подключения к почтовой системе. Имя конфигуарции - `cli/mail`.
-
-```yaml
-cli:
-  timezone: "Moscow"
-
-  mail:
-    enable: true
-    from: 'Admin <admin@test-mail.ru>'
-    host: test-mail.ru
-    port: 25
-    footer: '<br><br>--------------<br>Your gem <b>cli_application</b>'
-```
-
-Допустимые ключи:
-* `enable` - если true, то допускается отправка сообщений. Через эту опцию можно запретить отправку
-* `from` - адрес почты, с которой будет отправлено сообщение
-* `host` - SMPT-сервер. Пока имеется ограничение - использование должно быть без пароля
-* `port` - IP-порт почтового сервера
-* `footer` - Подпись сообщения
-
-Затем отправим письмо.
-
-```ruby
-def main
-  mail.quick_send('stan@test-mail.ru', 'Stan', 'Тестовый заголовок', 'Hellow, world')
-  0
-end
-```
-
-В итоге получим.
-
-```html
-Hellow, world
-
---------------
-Your gem <b>cli_application</b>
-```
-
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/cli_application/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request

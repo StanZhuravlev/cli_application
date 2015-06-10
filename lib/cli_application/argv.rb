@@ -84,6 +84,8 @@ module CliApplication
 
     # Метод выводит подсказку по аргументам командной строки
     def help
+      return if @full.empty?
+
       puts
       puts "Параметры приложения:"
 

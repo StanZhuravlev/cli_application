@@ -6,73 +6,46 @@ module CliApplication
 
     # Инициализация методов, позволяющих рассылать письма адимнистраторам
     # системы
-    def initialize(config)
-      @config = config
-      if !@config.nil? && @config.enable
-        @is_valid = true
-      else
-        @is_valid = false
+    def self.new(config, folders)
+      res = self.check(config)
+
+      case res[:delivery_method]
+        when :log
+          ::CliApplication::MailLib::Log.new(config, folders)
+        when :smtp
+          ::CliApplication::MailLib::SMTP.new(config, folders)
+        when :sendmail
+          ::CliApplication::MailLib::Sendmail.new(config, folders)
+        else
+          ::CliApplication::MailLib::Error.new(config, folders)
       end
     end
 
-    # Метод показывает готовность подсистемы отсылки почты администратору
-    # @return [Boolean] true, если разрешено отправлять письма администратору
-    def valid?
-      @is_valid
+    def self.check(config)
+      methods = ['log', 'sendmail', 'smtp']
+
+      return self.set_valid_state(false, 'Отсутствует секция mail') if config.nil?
+      return self.set_valid_state(false, 'Отсутствует параметр enable в секции mail') if config.enable.nil?
+      return self.set_valid_state(false, 'Отсутствует параметр from в секции mail') if config.from.nil?
+      return self.set_valid_state(false, 'Параметр from в секции mail не должен быть пустым') if config.from.strip == ''
+      warn "Внимание: передача почтовых сообщений отключена" unless config.enable
+      return self.set_valid_state(false, "Метод доставки должен быть один из: #{methods.inspect}") unless methods.include?(config.delivery_method.to_s)
+
+      res = Hash.new
+      res[:valid] = true
+      res[:delivery_method] = config.delivery_method.to_sym
+      res[:error_msg] = ''
+      res
     end
 
-    # Функция отправляет сообщение по электронной почте
-    # @param [String] to электронная почта лица, которому отправляется сообщение
-    # @param [String] name имя клиента, которому отправляется сообщение
-    # @param [String] title заголовок письма
-    # @param [String] body текст письма
-    # @return [Boolean] true, если письмо отправлено
-    def quick_send(to, name, title, body)
-      return false unless valid?
-
-      to_email = (name.nil? || name == '') ? to : "#{name} <#{to}>"
-      body_full = (@config.footer.nil? || @config.footer == '') ? body : (body+@config.footer)
-
-      begin
-        send_message(to_email, title, body_full)
-        true
-      rescue Errno::ECONNREFUSED
-        puts "Почтовый сервер не найден, выводим почтовое сообщение в консоль"
-        puts "From: #{@config.from.inspect}"
-        puts "To: #{to_email.inspect}"
-        puts "Title: #{title.inspect}"
-        puts "Body: #{(body_full[0,256] + '...').inspect}"
-        false
-      rescue Exception => e
-        puts "Ошибка отправки письма: #{e.message}"
-        false
-      end
+    def self.set_valid_state(state, error_msg)
+      res = Hash.new
+      res[:valid] = false
+      res[:delivery_method] = :error
+      res[:error_msg] = error_msg
+      res
     end
 
-    def send_message(to, title, body)
-      msgstr = <<MESSAGE_END
-From: #{@config.from}
-To: #{to}
-Subject: #{title}
-Date: #{::Time.zone.now.to_formatted_s(:rfc822) }
-MIME-Version: 1.0
-Content-type: text/html
-
-#{body}
-MESSAGE_END
-
-      Net::SMTP.start(host, port) do |smtp|
-        smtp.send_message msgstr, @config.from, to
-      end
-    end
-
-    def host
-      @config.host || 'none'
-    end
-
-    def port
-      @config.port || 0
-    end
 
   end
 end

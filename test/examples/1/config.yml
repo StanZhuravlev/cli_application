@@ -10,8 +10,15 @@ cli:
       password: passwords_chars
 
   mail:
-    enable: true
-    from: 'Admin <admin@test-mail.ru>'
-    host: test-mail.ru
-    port: 25
+    enable: true  # Разрешить или заблокировать отправку почты
+    delivery_method: log # Способ отправки почты: smtp, log, sendmail
+    from: 'Admin <admin@cli-application.ru>' # 'Admin <mos_obl_data@mail.ru>'
     footer: '<br><br>--------------<br>Your gem <b>cli_application</b>'
+
+    log:
+      location: '****/mail/{exe}-mail-{date}.txt'  # *** - папка класса, **** - папка текущего приложения. Шаблоны: {exe}, {date}
+
+    sendmail:
+      location: /usr/sbin/sendmail
+      arguments: '-i -t -v'
+
