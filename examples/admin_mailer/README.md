@@ -144,7 +144,7 @@ cli:
     from: 'Cli-Application Notify <admin@cli-application.ru>'
 
   log:
-    location: '****/mail/{exe}-mail-{date}.txt'  # *** - папка класса, **** - папка текущего приложения. Шаблоны: {exe}, {date}
+    location: '****/mail/{exe}-mail-{date}.txt'
 ```
 
 Здесь все просто - указывается единственный параметр `location`. Данный параметр содержит имя папки, в которую будут
@@ -186,7 +186,7 @@ end
 <p>Необходимо <b>срочно</b> принять меры!
 ```
 
-Создадим тестовый скрипт - `[test_log.rb](/examples/admin_mailer/test_log.rb)`, в котором сделаем функцию `main`
+Создадим тестовый скрипт [test_log.rb](/examples/admin_mailer/test_log.rb), в котором сделаем функцию `main`
 следующего содержания.
 
 ```ruby
