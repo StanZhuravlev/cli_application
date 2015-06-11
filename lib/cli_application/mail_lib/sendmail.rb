@@ -4,20 +4,20 @@ module CliApplication
   module MailLib
     class Sendmail < ::CliApplication::MailLib::Base
 
-      def initialize(config, folders)
+      def initialize(config, folders) # :nodoc:
         @delivery_method = :sendmail
         super(config, folders)
 
         check_config
       end
 
-      # Функция всегда возвращает false
+      # Метод отправки электронного сообщения через sendmail
       #
-      # @param [String] to электронная почта лица, которому отправляется сообщение
+      # @param [String] to электронная почта лица, которому отправляется сообщение, или массив адресов
       # @param [String] name имя клиента, которому отправляется сообщение
       # @param [String] title заголовок письма
       # @param [String] body текст письма
-      # @return [Boolean] true, если письмо отправлено
+      # @return [Boolean] true, если письмо помещено в очередь сообщений sendmail
       def simple_send(to, name, title, body)
         return false unless valid?
 
@@ -36,16 +36,16 @@ module CliApplication
         end
       end
 
-      # Заглушка на случай вызова данной функции из класса иного, чем CliApplication::MailLib::Sendmail
+      # Метод возвращает путь к скрипту 'sendmail'
       #
-      # @return [String] пустая строка
+      # @return [String] путь к скрипту 'sendmail'
       def sendmail_location
         @config.sendmail.location
       end
 
-      # Заглушка на случай вызова данной функции из класса иного, чем CliApplication::MailLib::Sendmail
+      # Метод возаращает опции 'sendmail'
       #
-      # @return [String] пустая строка
+      # @return [String] опции 'sendmail'
       def sendmail_arguments
         @config.sendmail.arguments
       end
@@ -55,7 +55,7 @@ module CliApplication
 
 
 
-      def send_message(message)
+      def send_message(message) # :nodoc:
         # Дополнительная информация по использованию sendmail:
         #   http://blog.antage.name/posts/sendmail-in-rails.html
 
@@ -75,7 +75,7 @@ module CliApplication
         end
       end
 
-      def check_config
+      def check_config # :nodoc:
         return set_check_config_state(false, "Не найдена секция конфиг-файла cli/mail/sendmail") if @config.sendmail.nil?
         return set_check_config_state(false, "Не найден параметр конфиг-файла cli/mail/sendmail/location") if @config.sendmail.location.nil?
         return set_check_config_state(false, "Не найден параметр конфиг-файла cli/mail/sendmail/arguments") if @config.sendmail.arguments.nil?

@@ -4,14 +4,7 @@ module CliApplication
   module MailLib
     class Log < ::CliApplication::MailLib::Base
 
-
-      # Конструктор вызывается в случае успешной валидации основного раздела по настройке почты
-      # в файле конфигуарции.
-      #
-      # @param [Class] config класс конфигурации, с ключом mail (config.cli.mail)
-      # @param [Class] folders класс с описанием рабочих папок приложения
-      # @return [None] нет
-      def initialize(config, folders)
+      def initialize(config, folders) # :nodoc:
         @delivery_method = :log
         super(config, folders)
         check_config
@@ -29,7 +22,7 @@ module CliApplication
 
       # Функция записывает сообщение электронной почты в лог-файл, с преобразованием HTML-формата в текст
       #
-      # @param [String] to электронная почта лица, которому отправляется сообщение
+      # @param [String] to электронная почта лица, которому отправляется сообщение, или массив адресов
       # @param [String] name имя клиента, которому отправляется сообщение
       # @param [String] title заголовок письма
       # @param [String] body текст письма
@@ -58,16 +51,18 @@ module CliApplication
         false
       end
 
+
       private
 
-      def check_config
+
+      def check_config # :nodoc:
         return set_check_config_state(false, "Не найдена секция конфиг-файла cli/mail/log") if @config.log.nil?
         return set_check_config_state(false, "Не найден параметр конфиг-файла cli/mail/log/location") if @config.log.location.nil?
         return set_check_config_state(false, "Параметр конфиг-файла cli/mail/log/location не должен быть пустым") if @config.log.location == ''
         set_check_config_state(true, '')
       end
 
-      def prepare_log_filename
+      def prepare_log_filename # :nodoc:
         return '' unless valid?
 
         res = @config.log.location
