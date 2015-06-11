@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d161d20-3da9-49fd-9765-45807edbeb3a" name="Default" comment="Add mail description">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/examples/7/mail/app-mail-2015-06-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-11.txt" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/admin_mailer/test_send_mail.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/admin_mailer/README.md" afterPath="$PROJECT_DIR$/examples/admin_mailer/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/class/config.yml" afterPath="$PROJECT_DIR$/examples/class/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/examples/1/config.yml" afterPath="$PROJECT_DIR$/test/examples/1/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cli_application.iws" />
@@ -28,7 +30,7 @@
     <SUITE FILE_PATH="coverage/cli_application@app__2_.coverage" NAME="app (2) Coverage Results" MODIFIED="1431552880468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/examples/2" MODULE_NAME="cli_application" />
     <SUITE FILE_PATH="coverage/cli_application@IRB_console__cli_application.coverage" NAME="IRB console: cli_application Coverage Results" MODIFIED="1431500638118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cli_application" />
     <SUITE FILE_PATH="coverage/cli_application@cli_application.coverage" NAME="cli_application Coverage Results" MODIFIED="1430198871987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" MODULE_NAME="cli_application" />
-    <SUITE FILE_PATH="coverage/cli_application@test_send_mail.coverage" NAME="test_send_mail Coverage Results" MODIFIED="1433968757604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/admin_mailer" MODULE_NAME="cli_application" />
+    <SUITE FILE_PATH="coverage/cli_application@test_send_mail.coverage" NAME="test_send_mail Coverage Results" MODIFIED="1434006125485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/admin_mailer" MODULE_NAME="cli_application" />
     <SUITE FILE_PATH="coverage/cli_application@price.coverage" NAME="price Coverage Results" MODIFIED="1431619561688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/yandex_market" MODULE_NAME="cli_application" />
     <SUITE FILE_PATH="coverage/cli_application@test_valid.coverage" NAME="test_valid Coverage Results" MODIFIED="1433914005787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/admin_mailer" MODULE_NAME="cli_application" />
     <SUITE FILE_PATH="coverage/cli_application@app__4_.coverage" NAME="app (4) Coverage Results" MODIFIED="1431550847992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/examples/5" MODULE_NAME="cli_application" />
@@ -46,8 +48,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/admin_mailer/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.724138">
-              <caret line="419" column="0" selection-start-line="419" selection-start-column="0" selection-end-line="419" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.551724">
+              <caret line="405" column="63" selection-start-line="405" selection-start-column="63" selection-end-line="405" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -56,26 +58,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/examples/7/app.rb">
+      <file leaf-file-name="test-send-mail-mail-2015-06-10.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-10.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-225.93103">
-              <caret line="480" column="37" selection-start-line="480" selection-start-column="37" selection-end-line="480" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -83,27 +72,67 @@
         <entry file="file://$PROJECT_DIR$/examples/admin_mailer/test_send_mail.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/class/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/class/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2244389">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test-send-mail-mail-2015-06-11.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-11.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="price.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/yandex_market/price.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/cli_application/app.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cli_example.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/class/cli_example.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/examples/1/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40149626">
-              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -114,36 +143,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendmail.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/cli_application/mail_lib/sendmail.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smtp.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/cli_application/mail_lib/smtp.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.703704">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/cli_application/mail_lib/message.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5925927">
-              <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -164,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/cli_application/my_sql.rb" />
         <option value="$PROJECT_DIR$/test/tovar_categories.rb" />
         <option value="$PROJECT_DIR$/test/tovar_category.rb" />
         <option value="$PROJECT_DIR$/test/tovar.rb" />
@@ -204,17 +202,18 @@
         <option value="$PROJECT_DIR$/examples/class/cli_example.rb" />
         <option value="$PROJECT_DIR$/examples/admin_mailer/test_log.rb" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
-        <option value="$PROJECT_DIR$/examples/admin_mailer/README.md" />
         <option value="$PROJECT_DIR$/lib/cli_application/mail_lib/log.rb" />
         <option value="$PROJECT_DIR$/lib/cli_application/mail_lib/base.rb" />
         <option value="$PROJECT_DIR$/lib/cli_application/mail_lib/sendmail.rb" />
         <option value="$PROJECT_DIR$/lib/cli_application/mail_lib/smtp.rb" />
         <option value="$PROJECT_DIR$/lib/cli_application/mail_lib/message.rb" />
         <option value="$PROJECT_DIR$/test/examples/7/app.rb" />
-        <option value="$PROJECT_DIR$/examples/class/config.yml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/examples/admin_mailer/test_send_mail.rb" />
         <option value="$PROJECT_DIR$/test/examples/1/config.yml" />
+        <option value="$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-10.txt" />
+        <option value="$PROJECT_DIR$/examples/admin_mailer/test_send_mail.rb" />
+        <option value="$PROJECT_DIR$/examples/class/config.yml" />
+        <option value="$PROJECT_DIR$/examples/admin_mailer/README.md" />
       </list>
     </option>
   </component>
@@ -997,7 +996,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433969327645</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Add mail description">
+      <created>1433969509616</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1433969509616</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1045,9 +1050,9 @@
     <MESSAGE value="Used OpenStruct for config and argv" />
     <MESSAGE value="A few updates" />
     <MESSAGE value="Add mail functionlaity" />
-    <MESSAGE value="Add mail description" />
     <MESSAGE value="Add mail functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add mail functionality" />
+    <MESSAGE value="Add mail description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add mail description" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1056,14 +1061,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/cli_application/mail_lib/smtp.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/cli_application/mail_lib/message.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1104,6 +1101,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,13 +1155,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/yandex_market/price.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1292,14 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cli_application/app.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.296296">
-          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/cli_application/mail_lib/error.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1323,14 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/class/cli_example.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1343,14 +1318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="35" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1387,33 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/admin_mailer/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.724138">
-          <caret line="419" column="0" selection-start-line="419" selection-start-column="0" selection-end-line="419" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/class/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/examples/7/mail/app-mail-2015-06-10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/examples/7/app.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1433,18 +1373,85 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/class/cli_example.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/yandex_market/price.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cli_application/app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/admin_mailer/test_send_mail.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/admin_mailer/mail/test-send-mail-mail-2015-06-11.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/admin_mailer/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.551724">
+          <caret line="405" column="63" selection-start-line="405" selection-start-column="63" selection-end-line="405" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/examples/7/mail/app-mail-2015-06-10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/examples/1/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40149626">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/class/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2244389">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding />
         </state>
       </provider>

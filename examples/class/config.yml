@@ -5,3 +5,33 @@ cli:
     example:
       adapter: 'sqlite3'
       database: 'example.db'
+
+  mail:
+    enable: true
+    delivery_method: log
+    from: 'Cli-Application Notify <admin@cli-application.ru>'
+    footer: '<br><hr height="1px" width="250px" align="left">Тестовая подпись от <b>cli_application gem</b>'
+
+    smtp:
+      domain: cli-application.ru
+      address: smtp.cli-application.ru
+      port: 25
+      debug: true
+
+    smtp_mail_ru: # Пример настройки smtp.mail.ru. Переименовать ключ в smtp для активации секции
+      domain: mail.ru
+      address: smtp.mail.ru
+      port: 25
+      tls: true
+      authentication: :login
+      user_name: '***********@mail.ru'
+      password: '*****************'
+      debug: false
+
+    log:
+      location: '****/mail/{exe}-mail-{date}.txt'
+
+    sendmail:
+      location: /usr/sbin/sendmail
+      arguments: '-i -t -v'
+
