@@ -59,19 +59,22 @@ module CliApplication
         # Дополнительная информация по использованию sendmail:
         #   http://blog.antage.name/posts/sendmail-in-rails.html
 
+        filename = "/tmp/cli_application_mail_#{::Time.now.usec.to_s}.msg"
+        File.open(filename, 'w') { |file| file.write(message.to_s) }
+
         cmdline = Array.new
-        cmdline << "echo \"#{'rrrrr' + message.to_s}\""
-        cmdline << '|'
         cmdline << sendmail_location
         cmdline << sendmail_arguments
+        cmdline << "< #{filename}"
         cmdline << '2>&1'
         cmdline = cmdline.join(' ')
 
         output = `#{cmdline}`
         res = $?.exitstatus
+        File.delete(filename)
 
         if res != 0
-          raise "SendmailError_#{res}"
+          raise "SendmailError_#{res} (#{output.split(/\n/).first.strip})"
         end
       end
 

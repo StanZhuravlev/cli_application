@@ -16,7 +16,10 @@ module CliApplication
       argv.each do |one|
         if one.match(/[a-z\_0-9]\=/i)
           pair = one.split('=')
-          @params[pair.first.to_s.strip.downcase.to_sym] = pair.last
+          # UPDATE 2015-10-26 - при указании пустого параметра при запуске скрипта
+          # он становился равным самому себе, поскольку split строки вида "param="
+          # возвращал pair.first равное pair.last
+          @params[pair.first.to_s.strip.downcase.to_sym] = pair.last if pair.count > 1
         else
           warn "WARNING: некорректный ключ параметра командной строки: #{one.inspect} (#{File.basename(__FILE__)} at #{__LINE__})"
         end
