@@ -42,7 +42,7 @@ module CliApplication
       @folders[:class] = classfolder
 
       @argv = ::CliApplication::Argv.new(argv)
-      @stat = ::CliApplication::Stat.new(@folders)
+      @cli_stat_record = ::CliApplication::Stat.new(@folders)
       @config = ::CliApplication::Config.new(@folders)
 
       @databases = ::CliApplication::Databases.new(config.cli.databases)
@@ -108,7 +108,7 @@ module CliApplication
     # @param [Integer] code код завершения приложения, который будет передан в операционную систему (bash)
     def exitcode=(code)
       @exitcode = code
-      @stat.exitcode = code
+      @cli_stat_record.exitcode = code
     end
 
     # Метод устанавливает текущую версию приложения, которая потом отобразится в файле статистики
@@ -119,7 +119,7 @@ module CliApplication
     #   app.version = '2.1'
     def version=(val)
       @version = val
-      @stat.version = val
+      @cli_stat_record.version = val
     end
 
     # Метод устанавливает описание приложения, которое будет выведено при старте скрипта. Данный метод используется
@@ -131,7 +131,7 @@ module CliApplication
     #   app.description = 'Данное приложение обеспечивает.... (c) .... и т.д.'
     def description=(val)
       @description = val
-      @stat.description = val
+      @cli_stat_record.description = val
     end
 
     # Метод устанавливает краткое описание приложения, которое будет выведено при старте скрипта, а также
@@ -143,7 +143,7 @@ module CliApplication
     #   app.shortdescription = 'Утилита форматирования диска'
     def shortdescription=(val)
       @shortdescription = val
-      @stat.shortdescription = val
+      @cli_stat_record.shortdescription = val
     end
 
     # Метод устанавливает дату последнего изменения (выпуска) приложения. Используется в справочных целях
@@ -154,7 +154,7 @@ module CliApplication
     #   app.releasedate = '2015-05-11'
     def releasedate=(val)
       @releasedate = val
-      @stat.releasedate = val
+      @cli_stat_record.releasedate = val
     end
 
     # Метод предназначен для подключения файлов-моделей ActiveRecords. Архитектура CLI-приложения, учитывающая
@@ -181,7 +181,7 @@ module CliApplication
     #     # Код своего приложения
     #   end
     def init_app
-      @stat.last_started_at = ::Time.zone.now
+      @cli_stat_record.last_started_at = ::Time.zone.now
       @started_at = ::Time.now
       @exitcode = 0
 
@@ -226,19 +226,20 @@ module CliApplication
       self.exitcode = main || 255
       self.executed_at = (::Time.now - @started_at).to_f
       puts_footer
-      @stat.save
+      @cli_stat_record.save
+      self.exitcode
     end
 
     # Метод отображает на экране информацию о приложении (версия, дата последнего запуска, дата релиза, и пр.)
     # @param [Syn] type при указании :full выводится полное описание, при других значениях не выводится
     #   подсказка по аргументам командной строки
     def help(type = :full)
-      last_started_at_human = @stat.last_started_at_human
+      last_started_at_human = @cli_stat_record.last_started_at_human
 
       puts ::StTools::System.exename + ' - ' + @shortdescription
       puts "Версия #{@version} (#{@releasedate})"
       puts last_started_at_human
-      puts @stat.startes_human
+      puts @cli_stat_record.startes_human
       puts
       puts @description
 
@@ -269,7 +270,7 @@ module CliApplication
 
     def executed_at=(at)
       @executed_at = at
-      @stat.executed_at = at
+      @cli_stat_record.executed_at = at
     end
 
   end

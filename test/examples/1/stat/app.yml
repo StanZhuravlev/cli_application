@@ -1,26 +1,27 @@
 ---
 :name: app.rb
-:shortdescription: "Пример 4 - Различные параметры командной строки"
+:shortdescription: "Пример 3 - Настройка футера"
 :version: '1.0'
 :releasedate: '2015-05-11'
 :timezone: Moscow
-:last_started_at: '2015-10-26 22:16:55 +0300'
+:last_started_at: '2015-11-12 08:04:04 +0300'
 :folders:
-  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/8"
+  :app: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/3"
   :class: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1"
   :stat: "/Users/Stan/Documents/Development/RubyMine/cli_application/test/examples/1/stat"
 :avg:
-  :starts: 241
-  :executed_at: 4.43788
-  :executed_at_human: 4.43788 секунд
-  :memory: 35433
+  :starts: 242
+  :executed_at: 4.419676
+  :executed_at_human: 4.419676 секунд
+  :memory: 35434
 :last:
-  :started_at: '2015-10-26 22:16:55 +0300'
-  :executed_at: 0.029927
-  :executed_at_human: 0.029927 секунд
-  :memory: 36 кбайт
-  :exitcode: 0
+  :started_at: '2015-11-12 08:04:04 +0300'
+  :executed_at: 0.032581
+  :executed_at_human: 0.032581 секунд
+  :memory: 35 кбайт
+  :exitcode: 10
 :last10:
+- 2015-11-12 08:04:04 +0300,10,0.032581,35 кбайт
 - 2015-10-26 22:16:55 +0300,0,0.029927,36 кбайт
 - 2015-10-26 22:16:01 +0300,0,0.02892,36 кбайт
 - 2015-10-26 22:10:40 +0300,0,0.033229,36 кбайт
@@ -30,4 +31,3 @@
 - 2015-10-26 22:04:20 +0300,255,0.053609,35 кбайт
 - 2015-06-10 22:49:55 +0300,true,0.033085,37 кбайт
 - 2015-06-09 23:56:11 +0300,255,0.033716,37 кбайт
-- 2015-06-09 23:44:51 +0300,true,0.053136,36 кбайт
