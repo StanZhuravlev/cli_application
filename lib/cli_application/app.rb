@@ -35,7 +35,7 @@ module CliApplication
     # @param [String] classfolder директория, в которой расположен базовый класс проекта
     # @param [Sym] lang язык работы приложения (реализовано не полностью)
     def initialize(argv, appfolder, classfolder, lang = :ru)
-      ::StTools::Setup.setup(lang)
+      StTools.configure { |config| config.locale = lang }
 
       @folders = Hash.new
       @folders[:app] = appfolder
